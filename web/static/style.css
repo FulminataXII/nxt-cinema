@@ -1,18 +1,16 @@
-/* --- COLORS & VARS --- */
 :root {
     --main-bg: #000000;
     --strip-bg: #000000;
     --card-bg: #000000;
-    --drawer-bg: #ffe600;
+    --drawer-bg: #fffb02;
     --text-main: #ffffff;
     --text-muted: #ffffff;
     --accent: #00d47e;
-    /* Spotify-ish Green */
 
     --top-h: 80px;
     --bot-h: 50px;
     --card-w: 200px;
-    --drawer-w: 260px;
+    --drawer-w: 250px;
 }
 
 /* --- RESET --- */
@@ -43,6 +41,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+
 #top-strip {
     top: 0;
     height: var(--top-h);
@@ -61,9 +60,11 @@ body {
 /* --- LAYOUT STATE TRANSITIONS --- */
 /* Default (Top Bar) Position */
 #app-title {
-    font-size: 1.5rem;
+    font-size: 3rem;
+    color: #fffb02;
     margin: 0;
     transition: all 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 #search-wrapper {
@@ -77,7 +78,7 @@ body.state-initial #app-title {
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3.5rem;
+    font-size: 6rem;
     z-index: 1001;
 }
 
@@ -93,7 +94,7 @@ body.state-initial #search-wrapper {
 /* --- RESULTS GRID --- */
 #main-container {
     padding-top: var(--top-h);
-    padding-bottom: var(--bot-h);
+    padding-bottom: 100px;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -105,6 +106,7 @@ body.state-initial #search-wrapper {
 #results-center-box {
     width: 100%;
     max-width: 1200px;
+    padding-top: 20px;
     /* Fits 5 cards perfectly */
 }
 
@@ -125,33 +127,30 @@ body.state-initial #search-wrapper {
     position: relative;
     width: var(--card-w);
     background-color: var(--card-bg);
-    border-radius: 8px;
+    /* border-radius: 8px; */
     cursor: pointer;
     transition: transform 0.2s;
     /* Important: visible so drawer can stick out */
     overflow: visible;
+    border: 1px solid #fffb02
 }
 
 /* Hover: Bring to front */
 .movie-card:hover {
     z-index: 100;
     /* Lifts above neighbors */
-    transform: scale(1.05);
-}
-
-.card-base {
-    padding-bottom: 10px;
+    transform: scale(1.1);
+    border: 3px solid black;
 }
 
 .card-poster {
     width: 100%;
     height: 300px;
     object-fit: cover;
-    border-radius: 8px 8px 0 0;
 }
 
 .card-meta {
-    padding: 10px;
+    padding: 8px;
     text-align: center;
 }
 
@@ -182,7 +181,7 @@ body.state-initial #search-wrapper {
     /* Hidden initially */
     background-color: var(--drawer-bg);
     overflow: hidden;
-    border-radius: 0 8px 8px 0;
+    /* border-radius: 0 8px 8px 0; */
     box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
     transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
@@ -209,7 +208,7 @@ body.state-initial #search-wrapper {
     left: auto;
     right: 100%;
     /* Attach to left edge */
-    border-radius: 8px 0 0 8px;
+    /* border-radius: 8px 0 0 8px; */
     box-shadow: -10px 0 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -218,23 +217,25 @@ body.state-initial #search-wrapper {
     padding: 15px;
     flex-grow: 1;
     overflow-y: auto;
+    scrollbar-width: thin;
 }
 
 .drawer-overview {
-    font-size: 0.85rem;
+    font-size: 1.2rem;
+    font-style: italic;
     line-height: 1.5;
     color: #000000;
 }
 
 .drawer-btn {
     display: block;
-    padding: 12px;
+    padding: 18px;
     background-color: #000;
     color: var(--accent);
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .drawer-btn:hover {
@@ -243,15 +244,36 @@ body.state-initial #search-wrapper {
 
 /* Tom Select Dark Theme Overrides */
 .ts-control {
-    background-color: #333 !important;
-    border: 1px solid #444 !important;
+    background-color: #040404 !important;
+    border: 1px solid #fffb02 !important;
     color: #fff !important;
-    border-radius: 20px;
+    border-radius: 0px;
 }
 
 .ts-dropdown {
-    background-color: #333 !important;
+    background-color: #000000 !important;
     color: #fff !important;
+    border: yellow solid 1px;
+    border-radius: 0;
+    margin: 0;
+}
+
+.ts-wrapper.single .ts-control,
+.ts-wrapper.single .ts-control input {
+    cursor: text;
+    color: #fff;
+}
+
+.ts-wrapper.single .ts-control,
+.ts-wrapper.single .ts-control input {}
+
+.ts-dropdown-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 200px;
+    overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 .ts-dropdown .option {
@@ -260,4 +282,16 @@ body.state-initial #search-wrapper {
 
 .ts-dropdown .active {
     background-color: #444 !important;
+}
+
+.copyright-info {
+    font-style: italic;
+    font-size: medium;
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+.footnote-link {
+    color: yellow;
+    text-decoration: none;
 }

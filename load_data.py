@@ -4,7 +4,7 @@ import time
 import os
 
 # --- CONFIGURATION ---
-API_KEY = "bd03c37f1e75ca781769cd6007dfcee4"
+API_KEY = "NOTHING_TO_SEE_HERE"
 OUTPUT_FILE = "tmdb_10k_movies.csv"
 TOTAL_PAGES_TO_FETCH = 500  # 500 pages * 20 movies = 10,000 movies
 
@@ -69,7 +69,7 @@ def get_genre_map(api_key):
 
 # --- MAIN EXECUTION ---
 if __name__ == "__main__":
-    if API_KEY == "YOUR_TMDB_API_KEY_HERE":
+    if API_KEY == "NOTHING_TO_SEE_HERE":
         print("ERROR: Please insert your actual TMDB API Key in the script.")
     else:
         # 1. Fetch Basic Movie Data

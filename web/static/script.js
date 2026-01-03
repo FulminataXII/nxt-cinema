@@ -72,11 +72,11 @@ document.addEventListener("DOMContentLoaded", function () {
                             
                             <div class="card-drawer">
                                 <div class="drawer-content">
-                                    <h5 style="margin:0 0 10px 0; color:#000; font-weight:bold;">${title}</h5>
+                                    <h5 style="margin:0 0 10px 0; color:#000; font-weight:bold; font-size: 1.7rem;">${title}</h5>
                                     <p class="drawer-overview">${m.overview}</p>
                                 </div>
                                 <a href="${m.url}" target="_blank" class="drawer-btn">
-                                    View on TMDB (${m.score}%)
+                                    View on TMDB
                                 </a>
                             </div>
                         </div>

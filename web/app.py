@@ -56,8 +56,7 @@ def api_recommend():
                 'title': f"{movie['title']} ({movie['year']})",
                 'poster': movie['poster_url'],
                 'overview': movie['overview'],    # NEW
-                'url': movie['tmdb_url'],         # NEW
-                'score': round(row['score'] * 100, 1)
+                'url': movie['tmdb_url']
             })
         
     return jsonify({'recommendations': results})

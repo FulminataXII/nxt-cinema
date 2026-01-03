@@ -4,7 +4,7 @@ import time
 import os
 
 # --- CONFIGURATION ---
-API_KEY = "bd03c37f1e75ca781769cd6007dfcee4"
+API_KEY = "NOTHING_TO_SEE_HERE"
 INPUT_VECTORS = "movie_vectors.pkl"
 OUTPUT_FILE = "movie_data.pkl"
 
@@ -89,7 +89,7 @@ def fetch_and_enrich():
     print("Done! You can now run your Flask app.")
 
 if __name__ == "__main__":
-    if API_KEY == "YOUR_TMDB_API_KEY_HERE":
+    if API_KEY == "NOTHING_TO_SEE_HERE":
         print("ERROR: Please set your API Key inside the script.")
     else:
         fetch_and_enrich()

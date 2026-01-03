@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Matcher AI</title>
+    <title>Nxt Cinema</title>
     <link href="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/css/tom-select.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
@@ -12,7 +12,7 @@
 <body class="state-initial">
 
     <header id="top-strip">
-        <h1 id="app-title">Movie Matcher</h1>
+        <h1 id="app-title">Nxt Cinema</h1>
         <div id="search-wrapper">
             <select id="movie-search" placeholder="Search for a movie..."></select>
         </div>
@@ -26,7 +26,19 @@
     </main>
 
     <footer id="bottom-strip">
-        <p>© 2023 Movie Matcher AI | Powered by TMDB & Logistic Regression</p>
+        <p class="copyright-info">
+            © 2025 <a class="footnote-link" href="https://example.com">Nxt Cinema</a> by <a class="footnote-link"
+                href="https://github.com/FulminataXII">FulminataXII</a> is marked <a class="footnote-link"
+                href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a>
+            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""
+                style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
+                src="https://mirrors.creativecommons.org/presskit/icons/zero.svg" alt=""
+                style="max-width: 1em;max-height:1em;margin-left: .2em;">
+        </p>
+        <a style="margin: 0 20px;" href="https://www.themoviedb.org/"><img
+                src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_long_1-8ba2ac31f354005783fab473602c34c3f4fd207150182061e425d366e4f34596.svg"
+                alt="Logo of TMDB" height="15px" style="margin: 5px;"></a>
+
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/js/tom-select.complete.min.js"></script>

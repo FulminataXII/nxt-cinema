@@ -5,7 +5,7 @@ import time
 import os
 
 # --- CONFIGURATION ---
-API_KEY = "bd03c37f1e75ca781769cd6007dfcee4"
+API_KEY = "NOTHING_TO_SEE_HERE"
 INPUT_CSV = "tmdb_10k_movies.csv"
 OUTPUT_JSON = "tmdb_10k_movies_detailed.json"
 
@@ -71,7 +71,7 @@ def fetch_movie_details(movie_id, session):
 
 # --- MAIN EXECUTION ---
 if __name__ == "__main__":
-    if API_KEY == "YOUR_TMDB_API_KEY_HERE":
+    if API_KEY == "NOTHING_TO_SEE_HERE":
         print("ERROR: Please insert your API Key.")
     else:
         # 1. Load the IDs from Part 1

@@ -7,7 +7,7 @@ app = Flask(__name__)
 # --- LOAD ENRICHED DATA ---
 try:
     # CHANGED: Load the final rich dataset
-    movies_data = pickle.load(open("web\\movie_data_final.pkl", "rb"))
+    movies_data = pickle.load(open("movie_data_final.pkl", "rb"))
     
     # Dropdown Options (ID, Title, Poster)
     MOVIE_OPTIONS = [{
@@ -25,7 +25,7 @@ except FileNotFoundError:
     MOVIE_LOOKUP = {}
 
 def get_db_connection():
-    conn = sqlite3.connect('web\\recommendations.db')
+    conn = sqlite3.connect('recommendations.db')
     conn.row_factory = sqlite3.Row
     return conn
 
